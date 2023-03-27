@@ -16,6 +16,7 @@ public class TutoringProgramForm extends JFrame {
     private JButton pairTutee;
     private List<Tutor> listOfTutors;
     private List<Tutee> listOfTutees;
+    private List<String> commonCategories;
 
     public TutoringProgramForm() {
         listOfTutors = new ArrayList<>();
@@ -37,7 +38,7 @@ public class TutoringProgramForm extends JFrame {
                 String gradeInput = grade.getText();
                 String subjectInput = subject.getText();
                 String quarterInput = quarter.getText();
-                Tutor tutor = new Tutor(nameInput, emailInput, gradeInput, subjectInput, quarterInput, 0);
+                Tutor tutor = new Tutor(nameInput, emailInput, gradeInput, subjectInput, quarterInput, 0, commonCategories);
                 listOfTutors.add(tutor);
             }
         });
